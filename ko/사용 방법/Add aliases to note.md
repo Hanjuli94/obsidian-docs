@@ -2,13 +2,13 @@
 aliases: alias, aliases
 ---
 
-Sometimes, you might want to refer to the same file with multiple names in different contexts. These alternative names are what we call "aliases".
+경우에 따라 다른 컨텍스트에서 이름이 여러 개인 동일한 파일을 참조할 수 있습니다. 이 대체 이름들은 우리가 "별칭"이라고 한다.
 
-For example, you might want to refer to your partner by their full name, first name, or a nickname. Or you might want to refer to "artificial intelligence" by its abbreviation "AI". If you know multiple languages, you may want to refer to the same concept with their name in the same language that the rest of the note is written in.
+예를 들어 파트너의 전체 이름, 이름 또는 닉네임으로 파트너를 참조할 수 있습니다. 또는 "인공지능"을 약칭 "AI"로 지칭할 수도 있습니다. 여러 언어를 알고 있는 경우 노트의 나머지 부분이 쓰여진 언어와 동일한 언어로 동일한 개념을 참조할 수 있습니다.
 
-### Set aliases
+### 별칭 설정
 
-Starting in 0.9.16, you're able to specify the "aliases" property in a note's [[YAML front matter]] like so:
+0.9.16부터는, [[YAML front matter]]에서 다음과 같이 "별칭" 속성을 지정할 수 있습니다.
 
 ```
 ---
@@ -16,24 +16,24 @@ aliases: [AI, Artificial Intelligence]
 ---
 ```
 
-Please note that this section must be placed at the very top of a note to take effect.
+이 섹션을 적용하려면 노트의 맨 위에 배치해야 합니다.
 
-In the future, we'll consider more user-friendly ways to manage aliases than manually writing them in front matter.
+앞으로는 직접 작성하기보다는 사용자 친화적인 방식으로 별칭을 관리하는 방법을 더 고려해야 합니다.
 
-### Link with aliases
+### 별칭이 있는 링크
 
-Once you've set aliases for a file, you can write `[[alias]]` to link to the original page. A redirect icon will show up in the auto-complete list like so:
+파일에 별칭을 설정한 후에는 `[[alias]]`를 작성하여 원래 페이지로 연결할 수 있습니다. 리디렉션 아이콘이 자동 완성 목록에 다음과 같이 표시됩니다.
 
-![[Insert alises.png]]
+![[Insertalises.png]
 
-An internal link with display text will get inserted like so: `[[Add aliases to note|alias]]`.
+보여지는 텍스트가 있는 내부 링크는 다음과 같이 삽입됩니다: `[[Add aliases to note|alias]]`.
 
-Note: the link to alias is **NOT** inserted as `[[alias]]` for interoperability, so that other software can recognize it as well.
+참고: 별칭 링크는 다른 소프트웨어도 인식할 수 있도록 상호 운용성을 위해 `[[alias]]`로 삽입되지 **않습니다** .
 
-### Find unlinked mentions
+### 링크되지 않은 멘션 찾기
 
-After you've set aliases for a note, you can find unlinked mentions by both its name and its aliases.
+노트에 별칭을 설정한 후에는 노트의 이름과 별칭을 모두 사용하여 링크되지 않은 언급을 찾을 수 있습니다.
 
-For example, after setting "AI" as an alias for "Artificial intelligence", you'll see mentions of "AI" in other files in the [[Backlinks]] section.
+예를 들어, "AI"를 "인공지능"의 별칭으로 설정한 후, [[백링크]] 섹션의 다른 파일에서 "AI"에 대한 언급을 볼 수 있습니다.
 
-If you decide to link this mention, a link with display text set to the alias will be created for you. Following the example above, `AI` will become `[[Artificial intelligence|AI]]` once you click on the "Link" button.
+이 설명을 연결하기로 결정하면 보여지는 텍스트가 별칭으로 설정된 링크가 만들어집니다. 위의 예에 따르면 "링크" 버튼을 클릭하면 `AI`는 `[[인공지능|AI]]`가 된다.
